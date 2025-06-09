@@ -26,7 +26,7 @@ A scalable and performant URL shortener built using Node.js, Redis, and PostgreS
    git clone https://github.com/your-username/url-shortener.git
    cd url-shortener/backend
    npm install
-````
+``
 
 2. **Edit the database and Redis config manually** inside the appropriate config or source files:
 
@@ -70,4 +70,4 @@ ng serve
 * **React** – Frontend version 1
 * **Angular** – Frontend version 2
 
----
+
