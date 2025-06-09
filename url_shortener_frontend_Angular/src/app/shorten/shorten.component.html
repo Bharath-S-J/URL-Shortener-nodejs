@@ -1,0 +1,21 @@
+<!-- src/app/shorten/shorten.component.html -->
+<div class="shortener-container">
+  <h1>URL Shortener</h1>
+
+  <input 
+    type="text" 
+    [(ngModel)]="originalUrl" 
+    placeholder="Enter URL to shorten" 
+    [disabled]="isLoading" />
+
+  <button (click)="shorten()" [disabled]="isLoading || !originalUrl">
+    {{ isLoading ? 'Shortening...' : 'Shorten URL' }}
+  </button>
+
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="shortUrl" class="short-url-box">
+    <a [href]="shortUrl" target="_blank">{{ shortUrl }}</a>
+    <button class="copy-button" (click)="copyToClipboard()">Copy</button>
+  </div>
+</div>
